@@ -1,0 +1,3 @@
+place your discord webhook here and run the following command:
+```bash
+kubectl create secret generic discord --from-file=address=./discord-webhook.address
