@@ -14,3 +14,7 @@ flux create alert discord-bot-alert \
   --namespace=default \
   --export > notifications/alerts/discord-bot-alert.yaml
 ```
+
+after setup run the following command in notifications directory:
+```bash
+kustomize create --autodetect --recursive
