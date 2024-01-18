@@ -18,3 +18,12 @@ flux create alert discord-bot-alert \
 after setup run the following command in notifications directory:
 ```bash
 kustomize create --autodetect --recursive
+
+flux create secret git gitops-lab-deploy-auth \
+  --url=https://gitlab.com/falanges/ci-gitlab-tf-poc.git \
+  --namespace=default \
+  --username=falanges \
+  --password=your-pwd
+
+
+kubectl get secrets gitops-poc-deploy-auth -o yaml | yq '.data'
